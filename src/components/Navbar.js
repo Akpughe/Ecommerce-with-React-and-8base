@@ -1,13 +1,12 @@
 import React from 'react';
-
-const Navbar = () => {
-  return (
-    <nav className="navbar navbar-light bg-light">
-      <a className="navbar-brand">Shoppr</a>
-      <button className="btn btn-outline-success my-2 my-sm-0" type="submit">
-        Cart
-      </button>
-    </nav>
-  );
-};
-export default Navbar;
+    
+    const Navbar = (props) => {
+      return (
+        <nav className="navbar navbar-light bg-light">
+          <h3>Shoppr</h3>
+            <button className="btn btn-outline-success my-2 my-sm-0" onClick={() => props.show()}>Cart {(props.cart.length)}</button>
+        </nav>
+      );
+    };
+    
+    export default Navbar;
